@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+
+    /* 반복되지 않게 no-repeat */
+    background: url("https://i.imgur.com/XWXZpgV.jpeg") no-repeat;
+
+    background-size: cover;
+
+    /* 가로축의 중앙, 세로축의 중앙 */
+    background-position: center center;
+
+    /* vw = viewport width / vh = viewport height */
+    width: 100vw;
+    height: 100vh;
+}
+
+.contents {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+}
+
+.contents h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+
+.contents p {
+    font-size: 23px;
+}
+
+.btn {
+    background-color: rgba(0,0,0,0);
+    color: inherit;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.contents .btn:hover {
+    background-color: green;
+}
+
+/* 반응형으로 화면이 769px 으로 줄어들었을 때의 속성 값 */
+@media(max-width:769px) {
+    .contents h1 {
+        font-size: 50px;
+    }
+    
+    .contents p {
+        font-size: 20px;
+    }
+
+    .contents .btn {
+        font-size: 14px;
+    }
+}
